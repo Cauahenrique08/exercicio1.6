@@ -1,0 +1,21 @@
+package view;
+import controller.Exercicio6;
+import javax.swing.*;
+
+public class Ex6viewer {
+
+	public static void main(String[] args) {
+		Exercicio6 ex6 = new Exercicio6(); //chamada de métodos da classe recursiva
+		
+		int valA = 0;
+		int valB = 0; //iniciando as duas variáveis com 0 para validar se são naturais
+		do {
+		valA = Integer.parseInt(JOptionPane.showInputDialog("insira o primeiro valor natural: "));
+		valB = Integer.parseInt(JOptionPane.showInputDialog("insira o segundo valor natural: "));
+		} while (valA < 0 || valB < 0); //confere se os valores são naturais (caso fossem negativos poderia gerar um loop infinito)
+		int soma = ex6.somaRecursiva(valA, valB);
+		
+		JOptionPane.showMessageDialog(null, "o valor da soma é: " + soma);
+	}
+
+}
