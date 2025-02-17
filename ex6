@@ -1,0 +1,17 @@
+package controller;
+
+public class Exercicio6 {
+
+	public Exercicio6() {
+		super();
+	}
+
+	public int somaRecursiva(int valA, int valB) {
+		if (valA == 0) {
+			return valB; //a Condição de Parada acontece  quando o valor A tiver decrescido até ser totalmente adicionado ao valor B
+		}
+		
+		return somaRecursiva(valA - 1, valB + 1);  // a função remove 1 do valor A e o "transfere" para o valor B até o valor A atingir a Condição de Parada
+	}
+
+}
